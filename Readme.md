@@ -1,6 +1,6 @@
 # Library Management System
 
-A Library Management System built in Python as part of my BCA learning journey.
+A Library Management System built in Python.
 
 ## Features
 
