@@ -49,6 +49,39 @@ def search_books():
                 #here we are checking if the title of the book is not equal to the search term
      if not found:
                  print("No books found with the title:", search)
+def borrow_books():
+     print("enter books you want to borrow")
+     search = input("enter the title of the books you want to borrow: ")
+     found = False
+     for book in books:
+                if search == book["title"]:
+                    found = True
+                    if book["available"]:
+                        book["available"] = False
+                        save_books()
+                        print("You have borrowed the book:", book["title"])
+                    else:
+                        print("Sorry, the book is not available for borrowing.")
+
+                    break
+     if not found:
+         print("No books found with the title:", search)
+def return_books():
+     print("enter books you want to return")
+     search = input("enter the title of the books you want to return:")
+     found = False
+     for book in books:
+             if search == book["title"]:
+                found = True
+                if not book["available"]:
+                        book["available"] = True
+                        save_books()
+                        print("You have returned the book:", book["title"])
+                else:
+                       print("this book is already in library")
+                break
+                if not found:
+                           print("No books found with the title:", search)
 #here we are creating a while loop that will run until the user chooses to exit the program
 while True:
     #our main menu
@@ -56,8 +89,9 @@ while True:
     print("1. Add Book") 
     print("2. View Books")
     print("3. search for books")
-    print("4. Exit")
-
+    print("4. borrow books")
+    print("5. return books")
+    print("6. Exit")
     #this is where we take the input from the user
     choice = input("Enter choice: ")
 
@@ -71,8 +105,14 @@ while True:
         # search for books here
         search_books()
     elif choice == "4":
-        print("Exiting the program...")
-        break
+        # borrow books here
+        borrow_books()
+    elif choice == "5":
+        return_books()
+    elif choice == "6":
+     print("Exiting the program...")    
+    
+     break
     else:
         print("Invalid choice")
         print("Book added successfully!")

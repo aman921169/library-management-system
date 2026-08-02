@@ -7,6 +7,8 @@ A Library Management System built in Python.
 - Add books
 - View books
 - Search books
+- borrow books
+- return books
 - Save books to JSON
 - Load books automatically
 
@@ -17,8 +19,6 @@ A Library Management System built in Python.
 
 ## Planned Features
 
-- Borrow books
-- Return books
 - Delete books
 - Edit books
 - Tkinter GUI
