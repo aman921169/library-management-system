@@ -1,35 +1,53 @@
-# Library Management System
+# 📚 Library Management System
 
-A Library Management System built in Python.
+A simple Library Management System built with Python.
 
 ## Features
 
-- Add books
-- View books
-- Search books
-- borrow books
-- return books
-- Save books to JSON
-- Load books automatically
+- Add Book
+- View Books
+- Search Book
+- Borrow Book
+- Return Book
+- Edit Book
+- Delete Book
+- JSON file storage
+- Case-insensitive search
+- Git version control
 
 ## Technologies Used
 
-- Python
+- Python 3
 - JSON
-
-## Planned Features
-
-- Delete books
-- Edit books
-- Tkinter GUI
-- SQLite database
+- Git & GitHub
 
 ## How to Run
 
+1. Clone the repository
+
 ```bash
-py main.py
+git clone https://github.com/aman921169/library-management-system.git
 ```
 
-## Project Status
+2. Open the project folder
 
-Work in Progress
+```bash
+cd library-management-system
+```
+
+3. Run the program
+
+```bash
+python main.py
+```
+
+## Future Improvements
+
+- SQLite database
+- PySide6 GUI
+- Better project structure
+- Book IDs
+
+## Author
+
+Aman Kaurav
